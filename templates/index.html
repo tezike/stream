@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Pegasus</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="/static/css/form_upload.css" rel="stylesheet">
+    </head>
+
+    <body class="text-center">
+        <form class="form-upload" method=post>
+            <h1>Pegasus paraphraser</h1>
+            <h2>Type a valid text in the textbox to have it paraphrased!</h2>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Type Here</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="text" rows="3"></textarea>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Predict</button>
+            <br>
+            {% if prediction %}
+                <!-- <img class="mb-4" src="static/{{image_loc}}" alt="" width="256" height="256"> -->
+                <h3 class="h3 mb-3 font-weight-normal">Input:</h3>
+                <h3 class="h3 mb-3 font-weight-normal">{{input}}</h3>
+                <br>
+                <h3 class="h3 mb-3 font-weight-normal">Prediction:</h3>
+                <h3 class="h3 mb-3 font-weight-normal">{{prediction}}</h3>
+            {%endif%}
+        </form>
+    </body>
+</html>
+
+
